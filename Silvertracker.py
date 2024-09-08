@@ -3,8 +3,8 @@ import telebot
 import time
 
 
-TELEGRAM_TOKEN = '7379186998:AAGgNGUUOAXZPO0PGWPMMtA3UCUuCKCljbQ'
-CHANNEL_ID = '@Silverpricetime' 
+TELEGRAM_TOKEN = 'Token'
+CHANNEL_ID = 'ChannelId' 
 
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
 
@@ -31,7 +31,7 @@ def send_price_update(price, direction):
 # Inicializa o último preço como None
 last_price = None
 
-# Loop para verificar o preço continuamente
+
 while True:
     current_price = get_silver_price()
     
@@ -50,5 +50,5 @@ while True:
             send_price_update(current_price, direction)
             last_price = current_price  # Atualiza o último preço conhecido
             
-    # Aguarda um intervalo antes de verificar novamente
-    time.sleep(60)  # Verifica a cada 60 segundos
+
+    time.sleep(60)  # Verifica s
